@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: ibamoe-helm
+spec:
+    containers:
+      - name: web
+        image: registry.redhat.io/ibm-bamoe/bamoe-businesscentral-rhel8
+    imagePullSecrets:
+    # Insert your image pull secret that is built from https://access.redhat.com/terms-based-registry/#/accounts
+      - name: secret/16260001-timwuthenow-pull-secret
